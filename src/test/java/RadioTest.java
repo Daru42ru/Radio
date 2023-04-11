@@ -1,8 +1,15 @@
 import org.example.Radio;
 import org.junit.jupiter.api.Assertions;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class RadioTest {
+    @Test
+    public void shouldSizeStation () {
+        Radio cond = new Radio(29);
+        Assertions.assertEquals(29, cond.getMaxStationNumber());
+        Assertions.assertEquals(0, cond.getMinStationNumber());
+        Assertions.assertEquals(0, cond.getStationNumber());
+    }
     @Test
     public void shouldSetStationNumber () {
         Radio cond = new Radio();
